@@ -1,0 +1,359 @@
+<h2 class="sr-only">The Cape Apothecary Shopify homepage mockup with sage green and rustic colour palette</h2>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.page { background: #f5f0e8; width: 100%; }
+
+.topbar { background: #3d5c3d; padding: 7px 0; text-align: center; }
+.topbar p { font-size: 11px; color: #c8ddc8; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.nav { background: #f5f0e8; border-bottom: 0.5px solid #d4cdc4; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-family: var(--font-serif); font-size: 17px; color: #3d5c3d; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+.nav-links { display: flex; gap: 24px; }
+.nav-link { font-size: 12px; color: #5c4a30; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+.nav-actions { display: flex; gap: 16px; align-items: center; }
+.nav-icon { width: 18px; height: 18px; cursor: pointer; }
+.cart-badge { background: #3d5c3d; color: #f5f0e8; font-size: 10px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: -8px; margin-top: -10px; }
+
+.hero { background: #3d5c3d; padding: 64px 32px; display: flex; align-items: center; gap: 40px; }
+.hero-text { flex: 1; }
+.hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #a8c5a8; border: 0.5px solid #5c7a5c; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
+.hero-h1 { font-family: var(--font-serif); font-size: 36px; color: #f5f0e8; line-height: 1.25; font-weight: 500; margin-bottom: 16px; }
+.hero-sub { font-size: 14px; color: #a8c5a8; line-height: 1.7; margin-bottom: 28px; max-width: 360px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: #c8a87a; color: #2c1a08; font-size: 13px; font-weight: 500; padding: 11px 24px; border-radius: 4px; border: none; cursor: pointer; letter-spacing: 0.05em; }
+.btn-outline { background: transparent; color: #f5f0e8; font-size: 13px; padding: 11px 24px; border-radius: 4px; border: 0.5px solid #5c7a5c; cursor: pointer; letter-spacing: 0.05em; }
+.hero-image { width: 220px; height: 240px; background: #2c3d2c; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; flex-shrink: 0; }
+.hero-img-label { font-size: 11px; color: #5c7a5c; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero-img-name { font-family: var(--font-serif); font-size: 15px; color: #c8ddc8; }
+
+.trust-bar { background: #eef3ee; border-top: 0.5px solid #c8d4b8; border-bottom: 0.5px solid #c8d4b8; padding: 16px 32px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 12px; }
+.trust-item { display: flex; align-items: center; gap: 8px; }
+.trust-dot { width: 6px; height: 6px; border-radius: 50%; background: #3d5c3d; flex-shrink: 0; }
+.trust-text { font-size: 12px; color: #3d5c3d; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500; }
+
+.section { padding: 48px 32px; }
+.section-header { text-align: center; margin-bottom: 32px; }
+.section-eyebrow { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #a89070; margin-bottom: 8px; }
+.section-title { font-family: var(--font-serif); font-size: 26px; color: #2c3d2c; font-weight: 500; }
+.section-desc { font-size: 14px; color: #7a6a52; margin-top: 8px; line-height: 1.6; }
+
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+.product-card { background: #fff; border: 0.5px solid #d4cdc4; border-radius: 8px; overflow: hidden; cursor: pointer; }
+.product-img { height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.product-body { padding: 12px; }
+.product-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #a89070; margin-bottom: 4px; }
+.product-name { font-size: 14px; font-weight: 500; color: #2c3d2c; margin-bottom: 4px; line-height: 1.3; }
+.product-desc { font-size: 12px; color: #7a6a52; margin-bottom: 10px; line-height: 1.4; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; }
+.product-price { font-size: 15px; font-weight: 500; color: #3d5c3d; }
+.product-add { background: #3d5c3d; color: #f5f0e8; font-size: 11px; padding: 6px 12px; border-radius: 4px; border: none; cursor: pointer; }
+
+.story-section { background: #2c3d2c; padding: 56px 32px; display: flex; gap: 40px; align-items: center; }
+.story-img { width: 200px; height: 220px; background: #3d5c3d; border-radius: 8px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 0.5px solid #5c7a5c; }
+.story-img-text { font-size: 11px; color: #5c7a5c; letter-spacing: 0.1em; text-transform: uppercase; }
+.story-content { flex: 1; }
+.story-eyebrow { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #7a9e7a; margin-bottom: 12px; }
+.story-title { font-family: var(--font-serif); font-size: 26px; color: #f5f0e8; font-weight: 500; margin-bottom: 16px; line-height: 1.3; }
+.story-body { font-size: 14px; color: #a8c5a8; line-height: 1.75; margin-bottom: 24px; }
+.story-btn { background: transparent; color: #f5f0e8; font-size: 13px; padding: 10px 22px; border-radius: 4px; border: 0.5px solid #5c7a5c; cursor: pointer; }
+
+.values-section { background: #f5f0e8; padding: 48px 32px; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-top: 32px; }
+.value-card { background: #eef3ee; border: 0.5px solid #c8d4b8; border-radius: 8px; padding: 20px 16px; text-align: center; }
+.value-icon { width: 36px; height: 36px; margin: 0 auto 12px; }
+.value-title { font-size: 13px; font-weight: 500; color: #2c3d2c; margin-bottom: 6px; }
+.value-desc { font-size: 12px; color: #7a6a52; line-height: 1.5; }
+
+.testimonials { background: #eef3ee; padding: 48px 32px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 32px; }
+.testimonial-card { background: #f5f0e8; border: 0.5px solid #d4cdc4; border-radius: 8px; padding: 20px; }
+.stars { display: flex; gap: 3px; margin-bottom: 10px; }
+.star { width: 10px; height: 10px; background: #c8a87a; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.testimonial-text { font-size: 13px; color: #5c4a30; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
+.testimonial-author { font-size: 12px; font-weight: 500; color: #3d5c3d; }
+.testimonial-location { font-size: 11px; color: #a89070; }
+
+.newsletter { background: #3d5c3d; padding: 48px 32px; text-align: center; }
+.newsletter-title { font-family: var(--font-serif); font-size: 24px; color: #f5f0e8; font-weight: 500; margin-bottom: 8px; }
+.newsletter-sub { font-size: 14px; color: #a8c5a8; margin-bottom: 24px; }
+.newsletter-form { display: flex; gap: 8px; max-width: 400px; margin: 0 auto; }
+.newsletter-input { flex: 1; background: #2c3d2c; border: 0.5px solid #5c7a5c; border-radius: 4px; padding: 10px 14px; font-size: 13px; color: #f5f0e8; }
+.newsletter-input::placeholder { color: #5c7a5c; }
+.newsletter-btn { background: #c8a87a; color: #2c1a08; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 4px; border: none; cursor: pointer; white-space: nowrap; }
+
+.footer { background: #2c3d2c; padding: 40px 32px 24px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 32px; margin-bottom: 32px; }
+.footer-brand { font-family: var(--font-serif); font-size: 15px; color: #c8ddc8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.footer-tagline { font-size: 12px; color: #5c7a5c; line-height: 1.6; }
+.footer-heading { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #7a9e7a; margin-bottom: 12px; }
+.footer-link { font-size: 13px; color: #a8c5a8; margin-bottom: 8px; cursor: pointer; display: block; }
+.footer-bottom { border-top: 0.5px solid #3d5c3d; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.footer-copy { font-size: 12px; color: #5c7a5c; }
+.footer-legal { display: flex; gap: 16px; }
+.footer-legal-link { font-size: 12px; color: #5c7a5c; cursor: pointer; }
+</style>
+
+<div class="page">
+
+  <div class="topbar">
+    <p>Free delivery on orders over R500 · Nationwide shipping · Farm grown in Cape Town</p>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-logo">The Cape Apothecary</div>
+    <div class="nav-links">
+      <span class="nav-link">Shop</span>
+      <span class="nav-link">Our farm</span>
+      <span class="nav-link">Remedies</span>
+      <span class="nav-link">Journal</span>
+    </div>
+    <div class="nav-actions">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="#5c4a30" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="#5c4a30" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div style="display:flex; align-items:flex-start;">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="#5c4a30" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <div class="cart-badge">2</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-text">
+      <span class="hero-badge">Farm grown · Cape Town</span>
+      <h1 class="hero-h1">Grown with<br>intention.</h1>
+      <p class="hero-sub">Organic wellness remedies crafted on our Cape farm — from soil to your door. Pure, natural, and made with care.</p>
+      <div class="hero-btns">
+        <button class="btn-primary">Shop remedies</button>
+        <button class="btn-outline">Our story</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <ellipse cx="24" cy="14" rx="7" ry="10" stroke="#5c7a5c" stroke-width="1"/>
+        <line x1="24" y1="24" x2="24" y2="40" stroke="#5c7a5c" stroke-width="1"/>
+        <line x1="16" y1="31" x2="24" y2="27" stroke="#5c7a5c" stroke-width="1"/>
+        <line x1="32" y1="29" x2="24" y2="33" stroke="#5c7a5c" stroke-width="1"/>
+        <ellipse cx="24" cy="41" rx="8" ry="2.5" stroke="#a89070" stroke-width="0.75"/>
+      </svg>
+      <span class="hero-img-name">The Cape Apothecary</span>
+      <span class="hero-img-label">Est. 2025 · Cape Town</span>
+    </div>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">100% organic</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">Farm grown</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">Small batch</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">No additives</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">Nationwide delivery</span></div>
+  </div>
+
+  <div class="section" style="background:#f5f0e8;">
+    <div class="section-header">
+      <p class="section-eyebrow">Our remedies</p>
+      <h2 class="section-title">Bestselling products</h2>
+      <p class="section-desc">Each product grown, harvested and crafted on our Cape farm</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img" style="background:#eef3ee;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="14" y="8" width="12" height="22" rx="3" stroke="#3d5c3d" stroke-width="1"/><line x1="20" y1="30" x2="20" y2="36" stroke="#a89070" stroke-width="1"/><ellipse cx="20" cy="7" rx="3" ry="2" stroke="#3d5c3d" stroke-width="0.75"/></svg>
+          <span style="font-size:10px;color:#7a9e7a;letter-spacing:0.08em;text-transform:uppercase;">Detox tea</span>
+        </div>
+        <div class="product-body">
+          <p class="product-tag">Wellness tea</p>
+          <p class="product-name">Cape Detox Blend</p>
+          <p class="product-desc">Rooibos, lemon & ginger</p>
+          <div class="product-footer">
+            <span class="product-price">R120</span>
+            <button class="product-add">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" style="border: 1.5px solid #3d5c3d;">
+        <div class="product-img" style="background:#e8ede0;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="12" y="10" width="16" height="20" rx="4" stroke="#3d5c3d" stroke-width="1"/><rect x="16" y="7" width="8" height="5" rx="2" stroke="#a89070" stroke-width="0.75"/><line x1="16" y1="18" x2="24" y2="18" stroke="#7a9e7a" stroke-width="0.75"/><line x1="16" y1="22" x2="24" y2="22" stroke="#7a9e7a" stroke-width="0.75"/></svg>
+          <span style="font-size:10px;color:#7a9e7a;letter-spacing:0.08em;text-transform:uppercase;">Bestseller</span>
+        </div>
+        <div class="product-body">
+          <p class="product-tag" style="color:#3d5c3d;">Most popular</p>
+          <p class="product-name">Gut Health Capsules</p>
+          <p class="product-desc">Probiotic — 30 day supply</p>
+          <div class="product-footer">
+            <span class="product-price">R250</span>
+            <button class="product-add">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:#f5ece4;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="20" rx="10" ry="12" stroke="#a89070" stroke-width="1"/><path d="M14 16 Q20 12 26 16" stroke="#c8a87a" stroke-width="0.75" fill="none"/><path d="M14 20 Q20 16 26 20" stroke="#c8a87a" stroke-width="0.75" fill="none"/></svg>
+          <span style="font-size:10px;color:#a89070;letter-spacing:0.08em;text-transform:uppercase;">Sleep blend</span>
+        </div>
+        <div class="product-body">
+          <p class="product-tag">Sleep remedy</p>
+          <p class="product-name">Vitality Sleep Drops</p>
+          <p class="product-desc">Valerian & ashwagandha</p>
+          <div class="product-footer">
+            <span class="product-price">R220</span>
+            <button class="product-add">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:#eef3ee;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="12" width="20" height="18" rx="3" stroke="#3d5c3d" stroke-width="1"/><rect x="13" y="9" width="6" height="5" rx="1.5" stroke="#3d5c3d" stroke-width="0.75"/><rect x="21" y="9" width="6" height="5" rx="1.5" stroke="#a89070" stroke-width="0.75"/><circle cx="20" cy="22" r="4" stroke="#7a9e7a" stroke-width="0.75"/></svg>
+          <span style="font-size:10px;color:#7a9e7a;letter-spacing:0.08em;text-transform:uppercase;">Bundle</span>
+        </div>
+        <div class="product-body">
+          <p class="product-tag">Immunity</p>
+          <p class="product-name">Immunity Booster Pack</p>
+          <p class="product-desc">Vit C, Zinc & elderberry</p>
+          <div class="product-footer">
+            <span class="product-price">R280</span>
+            <button class="product-add">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:#f5ece4;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="14" width="10" height="16" rx="2" stroke="#a89070" stroke-width="1"/><rect x="22" y="10" width="10" height="20" rx="2" stroke="#3d5c3d" stroke-width="1"/><line x1="18" y1="22" x2="22" y2="22" stroke="#c8a87a" stroke-width="0.75"/></svg>
+          <span style="font-size:10px;color:#a89070;letter-spacing:0.08em;text-transform:uppercase;">Gift set</span>
+        </div>
+        <div class="product-body">
+          <p class="product-tag">Gift bundle</p>
+          <p class="product-name">Wellness Starter Kit</p>
+          <p class="product-desc">Tea + gut + sleep remedy</p>
+          <div class="product-footer">
+            <span class="product-price">R420</span>
+            <button class="product-add">Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="story-section">
+    <div class="story-img">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="14" rx="2" stroke="#5c7a5c" stroke-width="1"/><path d="M16 28 Q20 10 24 16 Q28 10 32 28" stroke="#7a9e7a" stroke-width="1" fill="none"/><line x1="24" y1="16" x2="24" y2="28" stroke="#5c7a5c" stroke-width="0.75"/></svg>
+      <span class="story-img-text">Cape farm</span>
+      <span style="font-size:11px;color:#3d5c3d;letter-spacing:0.08em;text-transform:uppercase;">Western Cape</span>
+    </div>
+    <div class="story-content">
+      <p class="story-eyebrow">Our story</p>
+      <h2 class="story-title">From our soil<br>to your wellness.</h2>
+      <p class="story-body">Every remedy we make begins on our farm in the Western Cape. We grow, harvest and craft each product in small batches — no shortcuts, no mass production. Just honest, organic wellness the way nature intended.</p>
+      <button class="story-btn">Read our story</button>
+    </div>
+  </div>
+
+  <div class="values-section">
+    <div class="section-header">
+      <p class="section-eyebrow">Why we're different</p>
+      <h2 class="section-title">The Cape Apothecary promise</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="13" stroke="#3d5c3d" stroke-width="1"/><path d="M12 18l4 4 8-8" stroke="#3d5c3d" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <p class="value-title">100% organic</p>
+        <p class="value-desc">No pesticides. No fillers. Just pure farm-grown ingredients.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 36 36" fill="none"><path d="M18 4 L22 14 L33 14 L24 20 L27 31 L18 25 L9 31 L12 20 L3 14 L14 14 Z" stroke="#a89070" stroke-width="1" fill="none"/></svg>
+        <p class="value-title">Small batch</p>
+        <p class="value-desc">Made in small quantities so every product is crafted with care.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 36 36" fill="none"><rect x="8" y="16" width="20" height="14" rx="2" stroke="#3d5c3d" stroke-width="1"/><path d="M13 16v-4a5 5 0 0 1 10 0v4" stroke="#3d5c3d" stroke-width="1"/><circle cx="18" cy="23" r="2" fill="#3d5c3d"/></svg>
+        <p class="value-title">Cape made</p>
+        <p class="value-desc">Proudly grown and made on our Western Cape family farm.</p>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 36 36" fill="none"><path d="M6 12 L18 6 L30 12 L30 24 L18 30 L6 24 Z" stroke="#a89070" stroke-width="1" fill="none"/><line x1="18" y1="6" x2="18" y2="30" stroke="#a89070" stroke-width="0.75"/><line x1="6" y1="18" x2="30" y2="18" stroke="#a89070" stroke-width="0.75"/></svg>
+        <p class="value-title">Ship nationwide</p>
+        <p class="value-desc">Fast delivery to all major cities and towns across South Africa.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <div class="section-header">
+      <p class="section-eyebrow">Customer love</p>
+      <h2 class="section-title">What people are saying</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testimonial-text">"The detox tea has become part of my morning ritual. You can taste the difference when something is actually made with care."</p>
+        <p class="testimonial-author">Naledi M.</p>
+        <p class="testimonial-location">Johannesburg</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testimonial-text">"Finally a South African wellness brand I trust. Knowing it's grown on a farm makes all the difference for me."</p>
+        <p class="testimonial-author">James T.</p>
+        <p class="testimonial-location">Cape Town</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="testimonial-text">"The sleep drops are incredible. Gentle, natural and actually work. I've ordered three times already."</p>
+        <p class="testimonial-author">Priya N.</p>
+        <p class="testimonial-location">Durban</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter">
+    <h2 class="newsletter-title">Join the apothecary</h2>
+    <p class="newsletter-sub">Wellness tips, farm updates and exclusive offers straight to your inbox</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" placeholder="Your email address" />
+      <button class="newsletter-btn">Subscribe</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">The Cape Apothecary</p>
+        <p class="footer-tagline">Grown with intention.<br>Made in the Cape.<br>Delivered nationwide.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Shop</p>
+        <span class="footer-link">All products</span>
+        <span class="footer-link">Wellness teas</span>
+        <span class="footer-link">Supplements</span>
+        <span class="footer-link">Gift bundles</span>
+      </div>
+      <div>
+        <p class="footer-heading">Our farm</p>
+        <span class="footer-link">Our story</span>
+        <span class="footer-link">How we grow</span>
+        <span class="footer-link">Ingredients</span>
+        <span class="footer-link">Journal</span>
+      </div>
+      <div>
+        <p class="footer-heading">Help</p>
+        <span class="footer-link">Shipping info</span>
+        <span class="footer-link">Returns</span>
+        <span class="footer-link">Track order</span>
+        <span class="footer-link">Contact us</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 The Cape Apothecary. All rights reserved.</p>
+      <div class="footer-legal">
+        <span class="footer-legal-link">Privacy policy</span>
+        <span class="footer-legal-link">Terms of service</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
